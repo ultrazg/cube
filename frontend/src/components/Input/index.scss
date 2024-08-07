@@ -1,0 +1,39 @@
+@import '@/assets/global/_variables.scss';
+@import '@/assets/global/_common.scss';
+
+.input-layout {
+  height: 2rem;
+
+  .input-box {
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    .input-label {
+      flex: 1;
+      color: $primary_font_color;
+      font-weight: 300;
+
+      @include no-select;
+    }
+
+    .input-body {
+      flex: 1;
+
+      input {
+        width: 96%;
+        border: none;
+        outline: none;
+        height: 1.7rem;
+        transition: 0.3s;
+        padding: 0 0.3rem;
+        border-radius: $border_radius;
+
+        &:focus {
+          border-bottom: 1px solid $border_line_color;
+        }
+      }
+    }
+  }
+}

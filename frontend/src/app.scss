@@ -1,0 +1,21 @@
+@import '@/assets/global/_variables.scss';
+@import '@/assets/global/_common.scss';
+
+.app-layout {
+  .content {
+    // background: white;
+    height: 350px;
+  }
+  .footer {
+    @include no-select;
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: $secondary_font_color;
+    font-weight: 300;
+    margin-top: 0.5rem;
+  }
+}

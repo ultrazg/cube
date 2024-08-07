@@ -1,0 +1,12 @@
+@import '@/assets/global/_variables.scss';
+
+html {
+  background-color: $primary_background_color;
+  padding: 0.7rem;
+  color: $primary_font_color;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}

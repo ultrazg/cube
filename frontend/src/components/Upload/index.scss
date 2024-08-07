@@ -1,0 +1,25 @@
+@import '@/assets/global/_variables.scss';
+@import '@/assets/global/_common.scss';
+
+.upload-layout {
+  height: 2rem;
+
+  .upload-box {
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    .upload-label {
+      flex: 1;
+      color: $primary_font_color;
+      font-weight: 300;
+
+      @include no-select;
+    }
+
+    .upload-body {
+      flex: 1;
+    }
+  }
+}

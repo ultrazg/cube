@@ -1,0 +1,74 @@
+@import '@/assets/global/_variables.scss';
+@import '@/assets/global/_common.scss';
+
+.button-layout {
+  @include no-select;
+
+  background: rgb(252, 252, 252);
+  height: 2rem;
+  border: 1px solid $border_line_color;
+  box-shadow: 0 0.5px 0 0 $border_line_color;
+  border-radius: $border_radius;
+  transition: 0.3s;
+
+  &.loading {
+    background: rgb(240, 240, 240);
+    border: 1px solid $border_line_color;
+    box-shadow: 0 0.5px 0 0 $border_line_color;
+    border-radius: $border_radius;
+    cursor: not-allowed;
+
+    // .button-box {
+    //   cursor: not-allowed !important;
+    // }
+
+    &:hover {
+      background: rgb(240, 240, 240);
+    }
+  }
+
+  &:hover {
+    background: rgb(248, 248, 248);
+  }
+
+  &:active {
+    background: rgb(240, 240, 240);
+    box-shadow: 0 0 0 0 $border_line_color;
+  }
+
+  .button-box {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    .button-label {
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        margin-right: 0.3rem;
+        animation: loading-spin 1.5s infinite linear;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes loading-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
