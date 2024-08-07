@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@/components'
+import { SelectFile } from '@/bridge/io'
 import './index.scss'
 
 type IProps = {
@@ -9,6 +10,19 @@ type IProps = {
 }
 
 const Upload: React.FC<IProps> = ({ label, style }) => {
+  const [filePath, setFilePath] = useState<string>('')
+
+  const handleSelectFile = () => {
+    SelectFile()
+      .then((res) => {
+        console.log('res', res)
+        setFilePath(res)
+      })
+      .catch((err) => {
+        console.log('err', err)
+      })
+  }
+
   return (
     <div
       className="upload-layout"
@@ -17,7 +31,9 @@ const Upload: React.FC<IProps> = ({ label, style }) => {
       <div className="upload-box">
         <div className="upload-label">{label}</div>
         <div className="upload-body">
-          <Button>···</Button>
+          <Button onClick={handleSelectFile}>
+            {filePath ? filePath : '···'}
+          </Button>
         </div>
       </div>
     </div>

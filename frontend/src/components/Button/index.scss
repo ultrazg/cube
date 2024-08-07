@@ -18,10 +18,6 @@
     border-radius: $border_radius;
     cursor: not-allowed;
 
-    // .button-box {
-    //   cursor: not-allowed !important;
-    // }
-
     &:hover {
       background: rgb(240, 240, 240);
     }
@@ -44,9 +40,15 @@
 
     .button-label {
       font-weight: 300;
-      display: flex;
+      display: -webkit-box;
       justify-content: center;
       align-items: center;
+      max-width: 200px;
+      overflow: hidden;
+      line-clamp: 1;
+      box-orient: vertical;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
 
       svg {
         margin-right: 0.3rem;

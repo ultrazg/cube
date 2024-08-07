@@ -41,7 +41,7 @@ const App = () => {
 
       <div className="content">content</div>
 
-      <div className="footer">cube by Hexdr3am v{version}</div>
+      <div className="footer">Cube by Hexdr3am v{version}</div>
     </div>
   )
 }
