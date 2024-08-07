@@ -39,7 +39,9 @@ const App = () => {
 
       <Divider />
 
-      <div className="content">content</div>
+      <div className="content">
+        <textarea readOnly />
+      </div>
 
       <div className="footer">Cube by Hexdr3am v{version}</div>
     </div>

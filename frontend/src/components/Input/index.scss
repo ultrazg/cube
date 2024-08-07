@@ -13,7 +13,6 @@
     .input-label {
       flex: 1;
       color: $primary_font_color;
-      font-weight: 300;
 
       @include no-select;
     }
@@ -31,7 +30,7 @@
         border-radius: $border_radius;
 
         &:focus {
-          border-bottom: 1px solid $border_line_color;
+          box-shadow: 0 1px 0 0 $border_line_color;
         }
       }
     }
